@@ -9,29 +9,35 @@ public class Calculator {
 	public static final int NUM_OPERANDS = 2; 
 	
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		CalculatorOperations calcOp = new CalculatorOperations();
-		/*System.out.println("Give me a number please: "); */
-		int choiceRoute = displayOptions();
 		
-		int[] params = new int[NUM_OPERANDS];
-		switch(choiceRoute) {
-			case 1: //Addition
-				params = getNumbers();
-				calcOp.add(params[0], params[1]);
-				break;
-			case 2: //Subtraction
-				params = getNumbers();
-				break;
-			case 3: //multi
-				params = getNumbers();
-				break;
-			case 4: //div
-				params = getNumbers();
-				break;
-			case 5: //exit
-				System.out.println("Thank you for using my calculator.");
-				return;
+		while(true) {
+			Scanner scan = new Scanner(System.in);
+			CalculatorOperations calcOp = new CalculatorOperations();
+			/*System.out.println("Give me a number please: "); */
+			int choiceRoute = displayOptions();
+			
+			double[] params = new double[NUM_OPERANDS];
+			switch(choiceRoute) {
+				case 1: //Addition
+					params = getNumbers();
+					calcOp.add(params[0], params[1]);
+					break;
+				case 2: //Subtraction
+					params = getNumbers();
+					calcOp.subtract(params[0], params[1]);
+					break;
+				case 3: //multi
+					params = getNumbers();
+					calcOp.multiply(params[0], params[1]);
+					break;
+				case 4: //div
+					params = getNumbers();
+					calcOp.divide(params[0], params[1]);
+					break;
+				case 5: //exit
+					System.out.println("Thank you for using my calculator.");
+					return;
+			}
 		}
 		
 	}
@@ -62,18 +68,18 @@ public class Calculator {
 		
 	}
 	
-	public static int[] getNumbers() {
+	public static double[] getNumbers() {
 		Scanner scan = new Scanner(System.in);
-		int[] ourNumbers = new int[NUM_OPERANDS]; //This can be resized if we wanted more potential numbers.
+		double[] ourNumbers = new double[NUM_OPERANDS]; //This can be resized if we wanted more potential numbers.
 		
 		//while(ourNumbers[0] == null) {
 			System.out.println("Please enter your first number: ");
-			ourNumbers[0] = Integer.parseInt(scan.nextLine());
+			ourNumbers[0] = Double.parseDouble(scan.nextLine());
 		//}
 		
 		//while(ourNumbers[1] == 0) {
 			System.out.println("Please enter your second number: ");
-			ourNumbers[1] = Integer.parseInt(scan.nextLine());
+			ourNumbers[1] = Double.parseDouble(scan.nextLine());
 			//could do some checks here for ints vs chars...
 			
 		//2}

@@ -1,29 +1,43 @@
+import java.util.Scanner;
 
 public class CalculatorOperations {
 
+	Scanner scan = new Scanner(System.in);
 	
-	public int add(int arg1, int arg2) {
-		return arg1+arg2;
-	}
-	
-	//Potential expanse - Adding support for more input numbers. (Not required and won't be supported currently)
-	public int add(int arg1, int arg2, int arg3) {
-		return arg1+arg2+arg3;
-	}
-	
-	public int subtract() {
+	public void add(double arg1, double arg2) {
+		double result = arg1+arg2;
+		System.out.println("You asked to add " + arg1 + " and " + arg2 +".");
+		System.out.println("The result is: " + result);
 		
-		return 0;
+		System.out.print("Press any key to continue. . .");
+		scan.nextLine();
 	}
 	
-	public int multiply() {
+	public void subtract(double arg1, double arg2) {
+		double result = arg1-arg2;
+		System.out.println("You asked to subtract " + arg1 + " and " + arg2 +".");
+		System.out.println("The result is: " + result);
 		
-		return 0;
+		System.out.print("Press any key to continue. . .");
+		scan.nextLine();
 	}
 	
-	public int divide() {
+	public void multiply(double arg1, double arg2) {
+		double result = arg1*arg2;
+		System.out.println("You asked to multiply " + arg1 + " and " + arg2 +".");
+		System.out.println("The result is: " + result);
 		
-		return 0;
+		System.out.print("Press any key to continue. . .");
+		scan.nextLine();
+	}
+	
+	public void divide(double arg1, double arg2) {
+		double result = arg1/arg2;
+		System.out.println("You asked to divide " + arg1 + " and " + arg2 +".");
+		System.out.println("The result is: " + result);
+		
+		System.out.print("Press any key to continue. . .");
+		scan.nextLine();
 	}
 	
 }
