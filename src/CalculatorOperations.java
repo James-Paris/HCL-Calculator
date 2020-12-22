@@ -8,7 +8,8 @@ public class CalculatorOperations {
 		double result = arg1+arg2;
 		System.out.println("You asked to add " + arg1 + " and " + arg2 +".");
 		System.out.println("The result is: " + result);
-		
+		System.out.println("The rounded result: " + (int) Math.round(result));
+		System.out.println("");
 		System.out.print("Press any key to continue. . .");
 		scan.nextLine();
 	}
@@ -17,7 +18,8 @@ public class CalculatorOperations {
 		double result = arg1-arg2;
 		System.out.println("You asked to subtract " + arg1 + " and " + arg2 +".");
 		System.out.println("The result is: " + result);
-		
+		System.out.println("The rounded result: " + (int) Math.round(result));
+		System.out.println("");
 		System.out.print("Press any key to continue. . .");
 		scan.nextLine();
 	}
@@ -25,8 +27,9 @@ public class CalculatorOperations {
 	public void multiply(double arg1, double arg2) {
 		double result = arg1*arg2;
 		System.out.println("You asked to multiply " + arg1 + " and " + arg2 +".");
-		System.out.println("The result is: " + result);
-		
+		System.out.println("The result with decimals: " + result);
+		System.out.println("The rounded result: " + (int) Math.round(result)); //added for type casting practice
+		System.out.println("");
 		System.out.print("Press any key to continue. . .");
 		scan.nextLine();
 	}
@@ -35,7 +38,8 @@ public class CalculatorOperations {
 		double result = arg1/arg2;
 		System.out.println("You asked to divide " + arg1 + " and " + arg2 +".");
 		System.out.println("The result is: " + result);
-		
+		System.out.println("The rounded result: " + (int) Math.round(result));
+		System.out.println("");
 		System.out.print("Press any key to continue. . .");
 		scan.nextLine();
 	}
