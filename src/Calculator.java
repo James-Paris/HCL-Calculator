@@ -8,11 +8,27 @@ public class Calculator {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		/*System.out.println("Give me a number please: "); */
-		
-		displayOptions();
+		int choiceRoute = displayOptions();
 		//String choice = scan.nextLine();
 		
-		
+		//System.out.println("We are now gnna use: " + choiceRoute);
+		switch(choiceRoute) {
+		case 1: //Addition
+			
+			break;
+		case 2: //Subtraction
+			
+			break;
+		case 3: //multi
+			
+			break;
+		case 4: //div
+			
+			break;
+		case 5: //exit
+			System.out.println("Thank you for using my calculator.");
+			return;
+		}
 		
 	}
 	
